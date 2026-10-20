@@ -1,22 +1,46 @@
+/* Mengatur tampilan dasar seluruh halaman web */
 body {
-   background-color: #FFFFE0; /* warna kuning cerah */
-   font-family: Arial, sans-serif; /* jenis huruf yang bersih dan mudah dibaca */
-   color: #191970; /* warna teks utama (biru gelap) */
+   background-color: #FFFFE0; /* Warna latar belakang kuning cerah */
+   font-family: Arial, sans-serif; /* Jenis huruf yang bersih dan mudah dibaca */
+   color: #191970; /* Warna teks utama (biru gelap) */
+   margin: 0;
+   padding: 20px;
 }
 
+/* Mengatur tampilan wadah/kartu profil */
 .kartu-profil {
-  width: 300px auto;
-  margin: 50px auto; /* 50px jarak atas/bawah, auto menengahkan kiri/kanan */
+  max-width: 300px; /* Lebar maksimal kartu */
+  width: 100%; /* Agar kartu fleksibel di layar kecil */
+  margin: 50px auto; /* 50px jarak atas/bawah, 'auto' menengahkan posisi kartu secara horizontal */
   padding: 20px;
-  background-color: white;
-  border-radius: 15px; /* membuat sudut menjadi melengkung */
-  box-shadow: 0 4px 8px rgba(0,0,0,0,1); /* efek bayangan */
+  background-color: white; /* Warna latar belakang kartu */
+  border-radius: 15px; /* Membuat sudut kartu melengkung */
+  
+  /* PERBAIKAN: Format rgba yang benar adalah rgba(merah, hijau, biru, transparansi) */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan halus */
+  
+  text-align: center; /* Menengahkan seluruh teks dan elemen di dalam kartu */
 }
+
+/* Mengatur tampilan foto profil di dalam kartu */
 .kartu-profil img {
-  width: 200px;
-  border-radius: 50%; /* trik untuk memulai gambar persegi lingkaran sempurna */
+  width: 150px; /* Ukuran lebar foto */
+  height: 150px; /* Ukuran tinggi foto */
+  object-fit: cover; /* Memastikan gambar tidak terdistorsi/gepeng */
+  border-radius: 50%; /* Trik membuat gambar persegi menjadi lingkaran sempurna */
 }
-.kartu-profil {
-  /* ... (kode dari slide sebelumnya) ... */
- text-align: center; /* menengahkan semua teks di dalam kartu */
+
+/* Mengatur tampilan tombol sapa */
+.kartu-profil button {
+  padding: 10px 20px;
+  background-color: #191970;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Efek saat tombol diarahkan oleh kursor mouse */
+.kartu-profil button:hover {
+  background-color: #000080;
 }
